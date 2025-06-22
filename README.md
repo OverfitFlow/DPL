@@ -1,2 +1,2 @@
-## DPL: Decoupled Multimodal Prototypes for Visual Recognition with Missing Modalities
+## DPL
 Codes are coming soon...

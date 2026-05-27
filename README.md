@@ -1,6 +1,6 @@
 ## DPL - Decoupled Prototype Learning for Enhancing Robustness of Vision-Language Transformers to Missing Modalities [CVPR 2026]
 
-### :pushpin:
+### :pushpin: Progress
 I currently have limited time to work on this repo and will update it gradually.
 
 ### Acknowledgement

@@ -3,14 +3,16 @@ missing_pattern=both
 missing_ratio=0.7
 exp_name=mm/train/DPL_both07
 exp_name_test=mm/test/DPL_both07
-contrast_coef=0.2
-arc_m=0.1 
+contrast_coef=0.9
+arc_m=0.1
 arc_m_tm=0.15 
 arc_m_im=0.15
+data_path=datasets/mmimdb
+task=task_finetune_mmimdb
 
 CUDA_VISIBLE_DEVICES=${device} \
-python run.py with data_root=datasets/mmimdb \
-    per_gpu_batchsize=4 num_gpus=1 num_nodes=1 task_finetune_mmimdb \
+python run.py with data_root=${data_path} \
+    per_gpu_batchsize=4 num_gpus=1 num_nodes=1 ${task} \
     missing_ratio="{'train': ${missing_ratio}, 'val': ${missing_ratio}, 'test': ${missing_ratio}}" \
     missing_type="{'train': ${missing_pattern}, 'val': ${missing_pattern}, 'test': ${missing_pattern}}" \
     seed=0 \
@@ -22,8 +24,8 @@ python run.py with data_root=datasets/mmimdb \
 
 
 CUDA_VISIBLE_DEVICES=0 \
-python run.py with data_root=datasets/mmimdb \
-    per_gpu_batchsize=4 num_gpus=1 num_nodes=1 task_finetune_mmimdb \
+python run.py with data_root=${data_path} \
+    per_gpu_batchsize=4 num_gpus=1 num_nodes=1 ${task} \
     missing_ratio="{'train': ${missing_ratio}, 'val': ${missing_ratio}, 'test': ${missing_ratio}}" \
     missing_type="{'train': ${missing_pattern}, 'val': ${missing_pattern}, 'test': ${missing_pattern}}" \
     seed=0 \

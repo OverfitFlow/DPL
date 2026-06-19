@@ -1,14 +1,14 @@
 device=0
-missing_pattern=both
-missing_ratio=0.7
-exp_name=mm/train/DPL_both07
-exp_name_test=mm/test/DPL_both07
-contrast_coef=0.2
-arc_m=0.1
-arc_m_tm=0.15 
-arc_m_im=0.15
-data_path=datasets/mmimdb
-task=task_finetune_mmimdb
+missing_pattern=image
+missing_ratio=0.5
+exp_name=hate/train/DPL_image05
+exp_name_test=hate/test/DPL_image05
+contrast_coef=0.4
+arc_m=0.15
+arc_m_tm=0.25
+arc_m_im=0.25
+data_path=datasets/Hatefull_Memes
+task=task_finetune_hatememes
 
 CUDA_VISIBLE_DEVICES=${device} \
 python run.py with data_root=${data_path} \

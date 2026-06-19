@@ -1,9 +1,9 @@
 device=0
 missing_pattern=both
-missing_ratio=0.7
-exp_name=mm/train/DPL_both07
-exp_name_test=mm/test/DPL_both07
-contrast_coef=0.2
+missing_ratio=0.9
+exp_name=mm/train/DPL_both09
+exp_name_test=mm/test/DPL_both09
+contrast_coef=0.1
 arc_m=0.1
 arc_m_tm=0.15 
 arc_m_im=0.15
